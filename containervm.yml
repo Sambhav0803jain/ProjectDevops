@@ -1,0 +1,19 @@
+- hosts: linux
+  become: true
+  tasks:
+  - name: docker_login
+    docker_login:
+      username: sambhavjain0803
+      password: Sambhav@123
+  - name: pull
+    docker_image:
+      name: sambhavjain0803/project1devops
+  - name: Container create
+    docker_container:
+      name: web
+      image: sambhavjain0803/project1devops
+      state: started
+      ports:
+            "80:8080"
+      tty: true
+      detach: true
