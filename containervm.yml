@@ -7,11 +7,11 @@
       password: Sambhav@123
   - name: pull
     docker_image:
-      name: sambhavjain0803/project1devops
+      name: sambhavjain0803/project1devops:latest
   - name: Container create
     docker_container:
       name: web
-      image: sambhavjain0803/project1devops
+      image: sambhavjain0803/project1devops:latest
       state: started
       ports:
             "80:8080"
