@@ -8,12 +8,10 @@
   - name: pull
     docker_image:
       name: sambhavjain0803/project1devops
-      tag: mytomcat
   - name: Container create
     docker_container:
       name: web
       image: sambhavjain0803/project1devops
-      tag: mytomcat
       state: started
       ports:
             "80:8080"
